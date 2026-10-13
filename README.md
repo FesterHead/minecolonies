@@ -1,11 +1,10 @@
+# MineColonies
+
 [![CLA assistant](https://cla-assistant.io/readme/badge/ldtteam/minecolonies)](https://cla-assistant.io/ldtteam/minecolonies)
 [![Build Status](https://buildsystem.ldtteam.com/app/rest/builds/buildType:LetSDevTogether_Minecolonies_Alpha_Release/statusIcon)](http://buildsystem.ldtteam.com/)
 [![Crowdin](https://badges.crowdin.net/minecolonies/localized.svg)](https://crowdin.com/project/minecolonies)
 
-![mcol logo](minecolonies_logo.png)
-
-
-# MineColonies
+![MineColonies Logo](minecolonies_logo.png)
 
 MineColonies is an interactive building mod that allows you to create a thriving town within Minecraft. It lets your leadership skills soar by providing you with everything you need to build your kingdom. MineColonies gives you the flexibility to create a colony as unique as every player. With so many options, you'll create a different colony every time, adapt it to any biome, build inside a mountain, on top of one, under the ocean, or in the sky.
 
@@ -15,37 +14,32 @@ MineColonies features NPC workers such as Builders, Farmers, Fishers, Foresters,
 
 It also includes specialized buildings such as the Warehouse, House, Town Hall, Barracks, Library, University, and even the School.
 
-#### Website:
-https://www.minecolonies.com/
+## Official Links
+
+* **Website:** <https://www.minecolonies.com/>
+* **CurseForge:** <https://www.curseforge.com/minecraft/mc-mods/minecolonies/files/all>
+* **Discord Community:** <https://discord.minecolonies.com>
 
 ## For Users
 
-You can find all our versions on Curseforge:
-
-https://www.curseforge.com/minecraft/mc-mods/minecolonies/files/all
-
-If you want to chat with the developers and join our amazing community:
-
-https://discord.minecolonies.com
-
 ### Creating an Issue
 
-MineColonies crashes every time? Have a suggestion? Found a bug? Create an issue now!
+Does MineColonies crash? Have a suggestion? Found a bug? Create an issue:
 
-1. Make sure your issue hasn't already been answered or fixed. Also think about whether your issue is a valid one before submitting it.
-2. Go to the [issues page](https://github.com/ldtteam/minecolonies/issues).
-3. Click `New Issue`
-4. Choose which type of issue you want to create.
-4. Fill in the form. Don't leave anything out!
-5. Click `Submit New Issue` and wait for a response!
+1. Make sure your issue has not already been answered or fixed. Also think about whether your issue is a valid one before submitting it.
+2. Go to the [MineColonies Issues page](https://github.com/ldtteam/minecolonies/issues).
+3. Click `New Issue`.
+4. Choose the appropriate issue template.
+5. Fill in the form completely. Don't leave anything out!
+6. Click `Submit New Issue` and wait for a response!
 
 ## For Developers
 
-### Adding MineColonies as a dependency
+### Adding MineColonies as a Dependency
 
 In Forge, add the following to your `build.gradle`:
 
-```gradle
+```groovy
 repositories {
     maven { url 'https://ldtteam.jfrog.io/ldtteam/modding' }
 }
@@ -61,132 +55,139 @@ dependencies {
 
 ### Compiling MineColonies
 
-IMPORTANT: Please report any issues you have, as there might be some problems with the documentation! Also make sure you know EXACTLY what you're doing! It's not our fault if your OS crashes, becomes corrupted, etc.
+> [!IMPORTANT]
+> Please report any issues you encounter, as there might be discrepancies with the documentation. Make sure you know what you're doing; we are not responsible for corrupted workspaces or OS issues.
 
 #### Setup Java
-The Java JDK is used to compile MineColonies.
 
-1. Download and install the Java JDK 8.
-    * [Windows](https://adoptopenjdk.net/): Choose OpenJDK 8 (LTS) version and HotSpot JVM, then click the `latest release` button. After the download is complete, open the file, accept the license agreement, and in a custom setup make sure that `Add to Path` and `Set JAVA_HOME` are set to `Entire feature will be installed on your local hard drive`. Then choose `Install` and wait for the installation to finish.
-    * Linux: Installation methods for certain popular flavors of Linux are listed below. If your distribution is not listed, follow the instructions specific to your package manager or install it manually [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
-		* Gentoo: `emerge dev-java/openjdk-bin:8`
-		* Archlinux: `pacman -S jdk8-openjdk`
-		* Ubuntu/Debian: `apt-get install openjdk-8-jdk`
-		* Fedora: `yum install java-1.8.0-openjdk`
-2. Open up your command line and run `javac`. If it spews out a bunch of possible options and the usage, you're good to go. If not, try the steps again.
+A Java JDK is required to compile MineColonies. **Java 17** is strictly required for Minecraft 1.19.2.
 
-**Troubleshooting**
-If the `javac` command does not work on Windows:
-* Go to `Control Panel\System and Security\System` and click on `Advanced System Settings` on the left-hand side.
-* Click on `Environment Variables`.
-* Under `System Variables`, click `New`.
-* For `Variable Name`, input `JAVA_HOME`.
-* For `Variable Value`, input something similar to `C:\Program Files\Java\jdk1.8.0_45` exactly as shown (or wherever your Java JDK installation is) and click `OK`.
-* Scroll down to a variable named `Path` and double-click on it.
-* Append `;%JAVA_HOME%\bin` EXACTLY AS SHOWN and click `OK`. Make sure the location is correct; double-check to make sure.
+1. Download and install **Java JDK 17** (Amazon Corretto 17 or Eclipse Adoptium Temurin 17).
+   * **Windows:** Download the JDK 17 installer from [Amazon Corretto](https://aws.amazon.com/corretto/) or [Eclipse Adoptium](https://adoptium.net/). In the installer options, ensure that `Set JAVA_HOME` and `Add to Path` are enabled.
+   * **Linux:** Install JDK 17 using your distribution package manager:
+     * Arch Linux: `pacman -S jdk17-openjdk`
+     * Ubuntu / Debian: `apt-get install openjdk-17-jdk`
+     * Fedora: `dnf install java-17-openjdk-devel`
+     * Gentoo: `emerge dev-java/openjdk-bin:17`
+2. Open your terminal and run `javac -version`. If it outputs version `17.x`, you are ready.
 
-#### Setup Gradle (Optional)
-Gradle is used to execute the various build tasks when compiling MineColonies.
+##### Troubleshooting Java on Windows
 
-1. Download and install Gradle.
-	* [Windows/Mac download link](http://www.gradle.org/downloads). You only need the binaries, but choose whatever flavor you want.
-		* Unzip the package and put it wherever you want, for example, `C:\Gradle`.
-	* Linux: Installation methods for certain popular flavors of Linux are listed below. If your distribution is not listed, follow the instructions specific to your package manager or install it manually [here](http://www.gradle.org/downloads).
-		* Gentoo: `emerge dev-java/gradle-bin`
-		* Archlinux: You'll have to install it from the [AUR](https://aur.archlinux.org/packages/gradle).
-		* Ubuntu/Debian: `apt-get install gradle`
-		* Fedora: Install Gradle manually from its website (see above), as Fedora ships a "broken" version of Gradle. Use `yum install gradle` only if you know what you're doing.
-2. Windows: Set environment variables for Gradle.
-	* Go back to `Environment Variables` and then create a new system variable.
-	* For `Variable Name`, input `GRADLE_HOME`.
-	* For `Variable Value`, input something similar to `C:\Gradle-3.0` exactly as shown (or wherever your Gradle installation is), and click `Ok`.
-	* Scroll down to `Path` again, and append `;%GRADLE_HOME%\bin` EXACTLY AS SHOWN and click `Ok`. Once again, double-check the location.
-3. Open up your command line and run `gradle`. If it says 'Welcome to Gradle [version].', then you're good to go. If not, try the steps again.
+If the `javac` command is not recognized on Windows:
+
+* Open **Environment Variables** (`System Properties → Advanced → Environment Variables`).
+* Under **System Variables**, click **New**:
+  * Variable name: `JAVA_HOME`
+  * Variable value: `C:\Program Files\Amazon Corretto\jdk17.0.20_10` (or your actual JDK 17 install directory).
+* In **System Variables**, locate `Path`, click **Edit**, and append `%JAVA_HOME%\bin`.
+
+#### Setup Gradle
+
+MineColonies includes the **Gradle Wrapper** (`gradlew` on Linux/macOS, `gradlew.bat` on Windows), which automatically downloads and executes the exact required version of Gradle (8.1.1). You do not need to install Gradle manually.
 
 #### Setup Git
-Git is used to clone MineColonies and update your local copy.
 
-1. Download and install Git [here](http://git-scm.com/download/).
-2. *Optional*: Download and install a Git GUI client, such as Gitkraken, SourceTree, GitHub for Windows/Mac, SmartGitHg, TortoiseGit, etc. A nice list is available [here](http://git-scm.com/downloads/guis).
+Git is used to clone the repository and keep your local branch updated.
 
-#### Setup MineColonies (Command Line)
-This section assumes that you're using the command line version of Git.
+1. Download and install Git from [git-scm.com](https://git-scm.com/download/).
+2. (*Optional*) Download a Git GUI client such as GitKraken, GitHub Desktop, SourceTree, or Fork. A full list is available at [Git GUI Clients](https://git-scm.com/downloads/guis).
 
-1. Open up your command line.
-2. Navigate to a place where you want to download the MineColonies source (e.g., `C:\GitHub\MineColonies\`) by executing `cd [folder location]`. This location is known as `basefolder` from now on.
-3. Execute `git clone https://github.com/Minecolonies/minecolonies.git`. This will download MineColonies' source into `basefolder`.
-4. Right now, you should have a directory that looks something like this:
+#### Clone MineColonies (Command Line)
 
-***
-    basefolder
-	\-MineColonies
-		\-MineColonies' files (should have `build.gradle`)
-***
+1. Open your terminal.
+2. Navigate to your desired workspace directory (referred to as `basefolder`).
+3. Clone the repository:
 
-#### Setup MineColonies (GitKraken)
-If you decide to go with a GUI client like GitKraken:
+   ```bash
+   git clone https://github.com/Minecolonies/minecolonies.git
+   ```
 
-1. Open GitKraken
-2. Click `File → Clone Repo`
-3. Select GitHub.com and choose a base folder to clone to.
-4. Write MineColonies in the "Repository to Clone" and select the one by ldtteam.
+4. Your directory structure should look like:
 
-![](https://i.imgur.com/jVTXyCJ.png)
+   ```text
+   basefolder/
+   └── minecolonies/
+       ├── build.gradle
+       ├── gradle.properties
+       └── src/
+   ```
 
-5. Click 'Clone the Repo'.
+#### Clone MineColonies (GitKraken)
+
+1. Open GitKraken.
+2. Click `File → Clone Repo`.
+3. Select GitHub.com and choose a base destination folder.
+4. Search for `minecolonies` and select the repository by `ldtteam`.
+
+   ![GitKraken Clone Repository Dialog](https://i.imgur.com/jVTXyCJ.png)
+
+5. Click **Clone the Repo**.
 
 #### Compile MineColonies (Command Line)
-1. Navigate to the MineColonies folder and run a `dir` to make sure the `build.gradle` file is where you expect it to be.
-2. Execute `gradlew build`. This first sets up Forge and downloads the necessary libraries to build MineColonies. Be patient, as this may take a while.
-    * If you did everything right, `BUILD SUCCESSFUL` will be displayed after it finishes.
-    * If you see `BUILD FAILED`, check the error output (it should be right around `BUILD FAILED`), fix everything (if possible), and try again.
-3. Go to `basefolder\MineColonies\build\libs`.
-    * You should see a `.jar` file named `MineColonies-universal-null.jar`.
-4. Copy the jar into your Minecraft `mods` folder, and you are done! (`~/.minecraft/mods` on Linux)
-5. Alternatively, you can also run `./gradlew runClient` to start Minecraft with this jar.
 
-#### Compile MineColonies (Intellij)
-1. Right-click the `build.gradle` file (or the background of the folder it's in) and select `Open Folder as Intellij Project`.
-2. Select `Auto Import` and make sure a valid Gradle and JVM are selected.
+1. Open your terminal in the `minecolonies` directory.
+2. Run the build command:
 
-![](https://i.imgur.com/ewccjDZ.png)
+   ```bash
+   ./gradlew build
+   ```
 
-3. This will prepare some of the libraries used by Forge.
-4. Click `View → Tool Windows → Gradle`.
-5. In the Gradle view, expand the options to `Tasks → fg_runs`.
-6. Click the small refresh symbol in the upper left of the Gradle view. This sets up Forge and downloads the necessary libraries to build MineColonies. 
-7. Execute `genIntellijRuns` and restart Intellij.
-8. You will see a runClient and runServer startup configuration in the dropdown at the top right next to the green "run" button. Select one and press "run".
-9. If it doesn't start and throws a lot of errors, try another refresh. This often does wonders.
-10. If you want to produce a running jar, execute the `build` task. This will result in a runnable jar file in `basefolder\MineColonies\build\libs`.
+   *(On Windows Command Prompt: `gradlew.bat build`)*
+   * On the first run, ForgeGradle downloads Minecraft Forge and required dependencies.
+   * When finished, `BUILD SUCCESSFUL` will be displayed.
+3. Locate the built jar in `build/libs/`:
+   * `build/libs/minecolonies-0.0.1-LOCAL-1.19.2.jar`
+4. Copy the jar into your Minecraft `mods/` directory.
+5. Alternatively, launch a Minecraft test client with the mod loaded:
 
-##### Troubleshooting
-If Gradle synchronization fails, make sure:
-1. `File → Project structure → Project → Project SDK` is set to your installed JDK version.
-2. `File → Settings → Build, Execution, Deployment → Build Tools → Gradle → Gradle JVM` is set to your installed JDK version.
+   ```bash
+   ./gradlew runClient
+   ```
+
+#### Compile MineColonies (IntelliJ IDEA)
+
+1. Open IntelliJ IDEA and choose **Open**, then select the project folder containing `build.gradle`.
+2. Allow Gradle to import dependencies and configure the project.
+
+   ![IntelliJ IDEA Project Setup](https://i.imgur.com/ewccjDZ.png)
+
+3. Open the Gradle tool window (`View → Tool Windows → Gradle`).
+4. Under `Tasks → fg_runs`, run `genIntellijRuns`.
+5. Restart or reload IntelliJ.
+6. Select `runClient` or `runServer` from the run configuration dropdown in the top-right and click **Run**.
+7. To package a runnable jar, execute the `build` or `shadowJar` task from the Gradle tool window.
+
+##### Troubleshooting IntelliJ Sync
+
+If Gradle synchronization fails:
+
+1. Go to `File → Project Structure → Project` and ensure **SDK** is set to **Java 17**.
+2. Go to `File → Settings → Build, Execution, Deployment → Build Tools → Gradle` and ensure **Gradle JVM** is set to **Java 17**.
 
 #### Updating Your Repository
-To get the most up-to-date builds, you'll have to update your local repository periodically.
 
-1. Open up your command line.
-2. Navigate to `basefolder` in the console.
-3. Ensure you have not made any changes to the local repository (if you did, there might be issues with Git).
-	* If you have, try reverting them to their status when you last updated your repository.
-4. Execute `git pull version/1.16.3`. This pulls all commits from the official repository that do not yet exist on your local repository and updates it (with GitKraken, click the small pull arrow at the top).
+To pull the latest commits into your local branch:
 
-#### Troubleshooting
-- Sometimes Gradle tasks fail because of missing memory. For that, you can find system-wide settings in the `.gradle` folder of your `HOME` directory (`~/.gradle/gradle.properties` or on Windows in `C:\Users\username\.gradle\gradle.properties`).
-- Sometimes after a branch change, libraries can not be resolved. Running another refresh in IntelliJ or the command line usually solves this issue.
+1. Open your terminal in the repository directory.
+2. Ensure you do not have uncommitted changes (`git status`).
+3. Pull the latest commits:
+
+   ```bash
+   git pull origin festercolonies-1.19.2
+   ```
+
+#### General Troubleshooting
+
+* **Out of Memory during Gradle builds:** Adjust Gradle memory settings in `gradle.properties` (`org.gradle.jvmargs=-Xmx3G`).
+* **Unresolved dependencies after branch switch:** Refresh Gradle dependencies from the Gradle tool window in IntelliJ, or run `./gradlew --refresh-dependencies`.
 
 ### Contributing
 
-#### Submitting a PR
-Found a bug in our code? Think you can make it more efficient? Want to help in general? Great!
+#### Submitting a Pull Request
 
-1. If you haven't already, create a GitHub account.
-2. Click the `Fork` icon located at the top right.
-3. Make your changes and commit them.
-	* If you're making changes locally, you'll have to do `git commit -a` and `git push` in your command line (or with GitKraken stage the changes, commit them, and push them first).
-4. Click `Pull Request` in the middle.
-5. Click 'New pull request' to create a pull request for this comparison, enter your PR's title, and create a detailed description telling us what you changed.
-6. Click `Create pull request` and wait for feedback!
+1. Create a GitHub account if you do not have one.
+2. Fork the repository on GitHub.
+3. Commit your changes locally.
+4. Push your changes to your fork.
+5. Open a Pull Request from your branch and fill in the PR template.
+6. Wait for feedback and reviews!

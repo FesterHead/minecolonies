@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Configured `org.gradle.java.home=C:/Program Files/Amazon Corretto/jdk17.0.20_10` to ensure Gradle forks and runs builds strictly under Amazon Corretto JDK 17, preventing Java 21 bytecode parsing exceptions (`major version 65`) in Gradle 8.1.1.
 - Updated `gradle/dependencies.gradle`:
   - Routed the `compileOnly` and `apiCompileOnly` dependencies for Dynamic Trees to local file `libs/DynamicTrees-1.19.2-1.1.0-BETA10.jar`, bypassing upstream LDTTeam JFrog Artifactory HTTP 409 Conflict errors when downloading legacy 1.19.2 artifacts.
+- Updated `README.md`:
+  - Fixed markdownlint errors (heading hierarchy, list indentation, image alt texts, bare URLs, and duplicate headers).
+  - Modernized developer documentation to reflect Java 17 requirements and Gradle Wrapper usage for 1.19.2 development.
+- Added `.markdownlint.json` and `.markdownlintignore` matching project standards.
 
 ### Fixed
 
