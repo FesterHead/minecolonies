@@ -13,13 +13,11 @@
       "level": 4
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:bow"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 9
+      "quantity": 20
     }
   ],
   "researchLevel": 4,

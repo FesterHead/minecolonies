@@ -13,13 +13,11 @@
       "level": 4
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:wheat_seeds"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 128
+      "quantity": 27
     }
   ],
   "researchLevel": 3,

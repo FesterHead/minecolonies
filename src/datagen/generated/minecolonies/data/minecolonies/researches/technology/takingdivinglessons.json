@@ -13,31 +13,11 @@
       "level": 2
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:kelp"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 16
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:seagrass"
-        ]
-      },
-      "quantity": 16
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:sea_pickle"
-        ]
-      },
-      "quantity": 16
+      "quantity": 60
     }
   ],
   "researchLevel": 3,

@@ -13,22 +13,11 @@
       "level": 9
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecolonies:clipboard"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 1
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:book"
-        ]
-      },
-      "quantity": 16
+      "quantity": 24
     }
   ],
   "researchLevel": 3,

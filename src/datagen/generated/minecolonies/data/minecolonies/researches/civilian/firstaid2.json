@@ -13,13 +13,11 @@
       "level": 2
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:hay_block"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 16
+      "quantity": 6
     }
   ],
   "researchLevel": 2,

@@ -9,31 +9,11 @@
   "parentResearch": "minecolonies:technology/whatyaneed",
   "requirements": [
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecolonies:gate_wood"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 64
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecolonies:ancienttome"
-        ]
-      },
-      "quantity": 2
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:iron_block"
-        ]
-      },
-      "quantity": 5
+      "quantity": 27
     }
   ],
   "researchLevel": 3

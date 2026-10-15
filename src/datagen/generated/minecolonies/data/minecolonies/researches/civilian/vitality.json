@@ -13,13 +13,11 @@
       "level": 4
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:golden_apple"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 16
+      "quantity": 40
     }
   ],
   "researchLevel": 4

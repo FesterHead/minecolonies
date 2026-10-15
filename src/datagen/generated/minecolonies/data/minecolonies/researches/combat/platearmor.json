@@ -9,17 +9,11 @@
   "parentResearch": "minecolonies:combat/ironarmor",
   "requirements": [
     {
-      "level": 4,
-      "mandatory-building": "blacksmith"
-    },
-    {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:iron_ingot"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 32
+      "quantity": 60
     }
   ],
   "researchLevel": 5,

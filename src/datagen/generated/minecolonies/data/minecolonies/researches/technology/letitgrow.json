@@ -13,13 +13,11 @@
       "level": 3
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecolonies:compost"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 16
+      "quantity": 8
     }
   ],
   "researchLevel": 2,

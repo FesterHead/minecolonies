@@ -15,9 +15,9 @@
     {
       "type": "minecolonies:item_tag",
       "item": {
-        "tag": "minecolonies:concrete"
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 32
+      "quantity": 6
     }
   ],
   "researchLevel": 3,

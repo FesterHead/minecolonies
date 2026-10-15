@@ -12,11 +12,9 @@
       "level": 2
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:bone"
-        ]
+        "tag": "minecraft:small_flowers"
       },
       "quantity": 8
     }

@@ -13,22 +13,11 @@
       "level": 3
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:sugar_cane"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 32
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:cactus"
-        ]
-      },
-      "quantity": 32
+      "quantity": 69
     }
   ],
   "researchLevel": 3,

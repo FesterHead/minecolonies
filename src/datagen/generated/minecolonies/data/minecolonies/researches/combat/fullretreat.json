@@ -9,13 +9,11 @@
   "parentResearch": "minecolonies:combat/retreat",
   "requirements": [
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:emerald"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 64
+      "quantity": 60
     }
   ],
   "researchLevel": 6

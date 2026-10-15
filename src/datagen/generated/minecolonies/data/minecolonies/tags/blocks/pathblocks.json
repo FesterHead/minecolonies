@@ -65,6 +65,23 @@
     "minecraft:deepslate_tiles",
     "minecraft:deepslate_tile_slab",
     "minecraft:deepslate_tile_stairs",
-    "#domum_ornamentum:bricks"
+    "#domum_ornamentum:bricks",
+    "#minecraft:planks",
+    "#minecraft:wooden_slabs",
+    "minecraft:stone",
+    "minecraft:stone_slab",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone_slab",
+    "minecraft:andesite",
+    "minecraft:andesite_slab",
+    "minecraft:granite",
+    "minecraft:granite_slab",
+    "minecraft:diorite",
+    "minecraft:diorite_slab",
+    "minecraft:blackstone",
+    "minecraft:blackstone_slab",
+    "minecraft:deepslate",
+    "minecraft:cobbled_deepslate",
+    "minecraft:cobbled_deepslate_slab"
   ]
-}
+}

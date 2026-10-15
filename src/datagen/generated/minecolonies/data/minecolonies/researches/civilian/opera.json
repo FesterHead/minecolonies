@@ -13,13 +13,11 @@
       "level": 5
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:cake"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 27
+      "quantity": 55
     }
   ],
   "researchLevel": 5,

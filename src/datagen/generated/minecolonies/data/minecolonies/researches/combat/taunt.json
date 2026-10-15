@@ -12,31 +12,11 @@
       "level": 1
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:rotten_flesh"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 8
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:bone"
-        ]
-      },
-      "quantity": 8
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:spider_eye"
-        ]
-      },
-      "quantity": 8
+      "quantity": 24
     }
   ],
   "researchLevel": 1,

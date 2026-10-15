@@ -13,13 +13,11 @@
       "level": 4
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:cooked_beef"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 64
+      "quantity": 6
     }
   ],
   "researchLevel": 2

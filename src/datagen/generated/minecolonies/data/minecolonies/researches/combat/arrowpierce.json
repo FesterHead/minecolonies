@@ -13,22 +13,11 @@
       "level": 1
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:arrow"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 64
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:redstone"
-        ]
-      },
-      "quantity": 64
+      "quantity": 27
     }
   ],
   "researchLevel": 3

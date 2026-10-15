@@ -8,22 +8,11 @@
   "icon": "minecraft:leather_boots",
   "requirements": [
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:white_wool"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 16
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:feather"
-        ]
-      },
-      "quantity": 16
+      "quantity": 7
     }
   ],
   "researchLevel": 1,

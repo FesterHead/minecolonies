@@ -13,31 +13,11 @@
       "level": 4
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:redstone"
-        ]
+        "tag": "minecraft:small_flowers"
       },
       "quantity": 64
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:gold_ingot"
-        ]
-      },
-      "quantity": 64
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:lapis_lazuli"
-        ]
-      },
-      "quantity": 128
     }
   ],
   "researchLevel": 4

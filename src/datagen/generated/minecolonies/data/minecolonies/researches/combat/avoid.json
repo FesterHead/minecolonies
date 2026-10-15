@@ -13,13 +13,11 @@
       "level": 4
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:emerald"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 8
+      "quantity": 6
     }
   ],
   "researchLevel": 3,

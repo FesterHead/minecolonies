@@ -13,13 +13,11 @@
       "level": 2
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:cookie"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 32
+      "quantity": 8
     }
   ],
   "researchLevel": 2,

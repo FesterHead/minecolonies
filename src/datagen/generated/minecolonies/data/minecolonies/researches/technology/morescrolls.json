@@ -12,31 +12,11 @@
       "level": 3
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:paper"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 64
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecolonies:ancienttome"
-        ]
-      },
-      "quantity": 1
-    },
-    {
-      "type": "minecolonies:item_list",
-      "item": {
-        "items": [
-          "minecraft:lapis_lazuli"
-        ]
-      },
-      "quantity": 64
+      "quantity": 12
     }
   ],
   "researchLevel": 1,

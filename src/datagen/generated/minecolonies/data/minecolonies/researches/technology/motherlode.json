@@ -11,9 +11,9 @@
     {
       "type": "minecolonies:item_tag",
       "item": {
-        "tag": "minecraft:diamond_ores"
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 64
+      "quantity": 66
     }
   ],
   "researchLevel": 6

@@ -13,13 +13,11 @@
       "level": 4
     },
     {
-      "type": "minecolonies:item_list",
+      "type": "minecolonies:item_tag",
       "item": {
-        "items": [
-          "minecraft:heart_of_the_sea"
-        ]
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 1
+      "quantity": 8
     }
   ],
   "researchLevel": 4,

@@ -14,9 +14,9 @@
     {
       "type": "minecolonies:item_tag",
       "item": {
-        "tag": "minecraft:planks"
+        "tag": "minecraft:small_flowers"
       },
-      "quantity": 64
+      "quantity": 9
     }
   ],
   "researchLevel": 1,
