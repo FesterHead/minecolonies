@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Special custom visitors in `data/minecolonies/visitors/` remain exempt and retain their author-defined genders and skins.
 - Added `enableReproduction` server configuration toggle in `ServerConfiguration.java` (`enablereproduction`, defaults to `false`):
   - Toggles whether citizens in houses can reproduce and spawn children.
+- Added `disablePatreonChecking` client configuration toggle in `ClientConfiguration.java` (`disablepatreonchecking`, defaults to `true`):
+  - Bypasses external HTTP authentication requests to `https://auth.minecolonies.com` and automatically unlocks all cosmetic perks (citizen skins, custom citizen names, and colony banner patterns).
+  - Automatically hides the Town Hall GUI Patreon button when enabled (`WindowMainPage.java`).
 
 ### Changed
 

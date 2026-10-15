@@ -6,6 +6,7 @@ import com.ldtteam.blockui.controls.*;
 import com.ldtteam.blockui.views.DropDownList;
 import com.ldtteam.structurize.client.gui.WindowSwitchPack;
 import com.ldtteam.structurize.storage.StructurePacks;
+import com.minecolonies.core.MineColonies;
 import com.minecolonies.core.Network;
 import com.minecolonies.core.client.gui.WindowBannerPicker;
 import com.minecolonies.core.client.gui.map.WindowColonyMap;
@@ -372,6 +373,19 @@ public class WindowMainPage extends AbstractWindowTownHall
         final Pane textPane = findPaneByID(DROPDOWN_TEXT_ID);
         final Pane namePane = findPaneByID(DROPDOWN_NAME_ID);
         final Pane resetButton = findPaneByID(BUTTON_RESET_TEXTURE);
+        final Pane patreonButton = findPaneByID(BUTTON_PATREON);
+
+        if (patreonButton != null)
+        {
+            if (MineColonies.getConfig().getClient().disablePatreonChecking.get())
+            {
+                patreonButton.hide();
+            }
+            else
+            {
+                patreonButton.show();
+            }
+        }
 
         if (isFeatureUnlocked.get())
         {
@@ -415,6 +429,12 @@ public class WindowMainPage extends AbstractWindowTownHall
      */
     public void checkFeatureUnlock()
     {
+        if (MineColonies.getConfig().getClient().disablePatreonChecking.get())
+        {
+            isFeatureUnlocked.set(true);
+            return;
+        }
+
         final String player = Minecraft.getInstance().player.getStringUUID();
         new Thread(() -> {
             try

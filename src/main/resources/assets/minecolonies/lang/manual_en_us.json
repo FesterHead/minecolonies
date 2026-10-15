@@ -39,6 +39,9 @@
   "minecolonies.config.colonyteamborders": "Show Colony Borders in Team Colors",
   "minecolonies.config.colonyteamborders.comment": "When true, the colony borders shown when holding the build tool will be in the colony's team color. When false, the colony you're inside will be white and any other colony will be red.",
 
+  "minecolonies.config.disablepatreonchecking": "Disable Patreon Checking",
+  "minecolonies.config.disablepatreonchecking.comment": "Bypass external Patreon auth API checks and unlock all cosmetic citizen textures, names, and banner patterns.",
+
   "minecolonies.config.diseasemodifier": "Disease Modifier",
   "minecolonies.config.diseasemodifier.comment": "How common diseases are. 1 = Very common, 100 = extremely rare.",
   "minecolonies.config.diseases": "Diseases",
@@ -60,6 +63,12 @@
 
   "minecolonies.config.badvisitorchance": "Bad Recruitment Chance",
   "minecolonies.config.badvisitorchance.comment": "Chance to get an evil Tavern visitor that will run off with the resources you give them. This is a %.",
+
+  "minecolonies.config.femaleonlycitizens": "Female Only Citizens",
+  "minecolonies.config.femaleonlycitizens.comment": "Whether new citizens (from Town Hall and Tavern visitors) should spawn as female only. Custom special visitors are exempt.",
+
+  "minecolonies.config.enablereproduction": "Enable Citizen Reproduction",
+  "minecolonies.config.enablereproduction.comment": "Whether citizens can reproduce and have children in the colony.",
 
   "minecolonies.config.researchcreativecompletion": "Research Creative Completion",
   "minecolonies.config.researchcreativecompletion.comment": "Allows automatic and (near) instant completion of research for players in creative mode. If false, creative players will still be able to begin researches, but will have normal progress rates.",
