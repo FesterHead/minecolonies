@@ -88,6 +88,11 @@ public class ReproductionManager implements IReproductionManager
      */
     public void trySpawnChild()
     {
+        if (!MinecoloniesAPIProxy.getInstance().getConfig().getServer().enableReproduction.get())
+        {
+            return;
+        }
+
         // Spawn a child when adults are present
         if (colony.canMoveIn() && colony.getCitizenManager().getCurrentCitizenCount() < colony.getCitizenManager().getMaxCitizens() && colony.getCitizenManager().getCurrentCitizenCount() >= Math.min(MIN_SIZE_FOR_REPRO, MinecoloniesAPIProxy.getInstance().getConfig().getServer().initialCitizenAmount.get()))
         {

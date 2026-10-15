@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added expanded default citizen names from custom datapack into `src/main/resources/data/minecolonies/citizennames/default.json` (expanded name pool from 24 KB to 120 KB).
 - Added additional building blocks and slabs (planks, wooden slabs, stone, cobblestone, andesite, granite, diorite, blackstone, deepslate, cobbled deepslate) to the `#minecolonies:pathblocks` tag in `src/datagen/generated/minecolonies/data/minecolonies/tags/blocks/pathblocks.json`.
+- Added `femaleOnlyCitizens` server configuration toggle in `ServerConfiguration.java` (`femaleonlycitizens`, defaults to `true`):
+  - Forces initial Town Hall citizen spawns and Tavern visitors to be female only, generating female names, biped models, textures, and voices.
+  - Special custom visitors in `data/minecolonies/visitors/` remain exempt and retain their author-defined genders and skins.
+- Added `enableReproduction` server configuration toggle in `ServerConfiguration.java` (`enablereproduction`, defaults to `false`):
+  - Toggles whether citizens in houses can reproduce and spawn children.
 
 ### Changed
 

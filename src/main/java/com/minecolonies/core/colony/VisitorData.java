@@ -4,6 +4,7 @@ import com.minecolonies.api.colony.IColony;
 import com.minecolonies.api.colony.IVisitorData;
 import com.minecolonies.api.util.BlockPosUtil;
 import com.minecolonies.api.util.WorldUtil;
+import com.minecolonies.core.MineColonies;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
@@ -92,6 +93,16 @@ public class VisitorData extends CitizenData implements IVisitorData
     public ItemStack getRecruitCost()
     {
         return recruitCost;
+    }
+
+    @Override
+    public void initForNewCivilian()
+    {
+        super.initForNewCivilian();
+        if (MineColonies.getConfig().getServer().femaleOnlyCitizens.get())
+        {
+            setGenderAndGenerateName(true);
+        }
     }
 
     /**

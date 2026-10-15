@@ -585,8 +585,12 @@ public class CitizenManager implements ICitizenManager
                 }
                 final ICitizenData newCitizen = createAndRegisterCivilianData();
 
+                if (MineColonies.getConfig().getServer().femaleOnlyCitizens.get())
+                {
+                    newCitizen.setGenderAndGenerateName(true);
+                }
                 // For first citizen, give a random chance of male or female.
-                if (getCitizens().size() == 1)
+                else if (getCitizens().size() == 1)
                 {
                     newCitizen.setGenderAndGenerateName(random.nextBoolean());
                 }
