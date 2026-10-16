@@ -28,7 +28,7 @@ public final class CitizenConstants
     /**
      * The limit of citizens if the last increase research is done, this is absolute limit of citizens, including config file.
      */
-    public static final int CITIZEN_LIMIT_MAX = 500;
+    public static final int CITIZEN_LIMIT_MAX = 1000;
 
     /**
      * Base movement speed of every citizen.

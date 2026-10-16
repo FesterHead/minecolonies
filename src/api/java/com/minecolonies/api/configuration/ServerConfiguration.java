@@ -164,7 +164,7 @@ public class ServerConfiguration extends AbstractConfiguration
         allowInfiniteColonies = defineBoolean(builder, "allowinfinitecolonies", false);
         allowOtherDimColonies = defineBoolean(builder, "allowotherdimcolonies", true);
         citizenRespawnInterval = defineInteger(builder, "citizenrespawninterval", 60, CITIZEN_RESPAWN_INTERVAL_MIN, CITIZEN_RESPAWN_INTERVAL_MAX);
-        maxCitizenPerColony = defineInteger(builder, "maxcitizenpercolony", 250, 4, CitizenConstants.CITIZEN_LIMIT_MAX);
+        maxCitizenPerColony = defineInteger(builder, "maxcitizenpercolony", 1000, 4, CitizenConstants.CITIZEN_LIMIT_MAX);
         builderBuildBlockDelay = defineInteger(builder, "builderbuildblockdelay", 15, 1, 500);
         blockMiningDelayModifier = defineInteger(builder, "blockminingdelaymodifier", 500, 1, 10000);
         enableInDevelopmentFeatures = defineBoolean(builder, "enableindevelopmentfeatures", false);
@@ -185,9 +185,9 @@ public class ServerConfiguration extends AbstractConfiguration
         badVisitorsChance = defineInteger(builder, "badvisitorchance", 2, 1, 100);
         femaleOnlyCitizens = defineBoolean(builder, "femaleonlycitizens", true);
         enableReproduction = defineBoolean(builder, "enablereproduction", false);
-        couriersPerHutLevel = defineInteger(builder, "couriersperhutlevel", 1, 1, 10);
-        couriersPerWarehouseLevel = defineInteger(builder, "couriersperwarehouselevel", 10, 1, 50);
-        citizensPerResidenceLevel = defineInteger(builder, "citizensperresidencelevel", 2, 1, 10);
+        couriersPerHutLevel = defineInteger(builder, "couriersperhutlevel", 10, 1, 10);
+        couriersPerWarehouseLevel = defineInteger(builder, "couriersperwarehouselevel", 50, 1, 50);
+        citizensPerResidenceLevel = defineInteger(builder, "citizensperresidencelevel", 10, 1, 10);
         maxTreeSize = defineInteger(builder, "maxtreesize", 400, 1, 1000);
         noSupplyPlacementRestrictions = defineBoolean(builder, "nosupplyplacementrestrictions", false);
         skyRaiders = defineBoolean(builder, "skyraiders", false);
