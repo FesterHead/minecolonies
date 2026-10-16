@@ -70,6 +70,15 @@
   "minecolonies.config.enablereproduction": "Enable Citizen Reproduction",
   "minecolonies.config.enablereproduction.comment": "Whether citizens can reproduce and have children in the colony.",
 
+  "minecolonies.config.couriersperhutlevel": "Couriers Per Hut Level",
+  "minecolonies.config.couriersperhutlevel.comment": "Multiplier for the number of couriers each Courier Hut level can hire (e.g. 1 = 1 courier per level, 2 = 2 couriers per level). Level 0 huts cannot hire workers.",
+
+  "minecolonies.config.couriersperwarehouselevel": "Couriers Per Warehouse Level",
+  "minecolonies.config.couriersperwarehouselevel.comment": "Multiplier for the number of couriers each Warehouse level can support (e.g. 10 = 10 couriers per level, so a level 5 warehouse can support up to 50 couriers).",
+
+  "minecolonies.config.citizensperresidencelevel": "Citizens Per Residence Level",
+  "minecolonies.config.citizensperresidencelevel.comment": "Multiplier for the number of citizen inhabitants each Residence level can support (e.g. 2 = 2 citizens per level, so a level 5 residence supports up to 10 citizens).",
+
   "minecolonies.config.researchcreativecompletion": "Research Creative Completion",
   "minecolonies.config.researchcreativecompletion.comment": "Allows automatic and (near) instant completion of research for players in creative mode. If false, creative players will still be able to begin researches, but will have normal progress rates.",
 

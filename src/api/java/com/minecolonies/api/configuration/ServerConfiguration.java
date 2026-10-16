@@ -45,6 +45,9 @@ public class ServerConfiguration extends AbstractConfiguration
     public final ForgeConfigSpec.IntValue     badVisitorsChance;
     public final ForgeConfigSpec.BooleanValue femaleOnlyCitizens;
     public final ForgeConfigSpec.BooleanValue enableReproduction;
+    public final ForgeConfigSpec.IntValue     couriersPerHutLevel;
+    public final ForgeConfigSpec.IntValue     couriersPerWarehouseLevel;
+    public final ForgeConfigSpec.IntValue     citizensPerResidenceLevel;
     public final ForgeConfigSpec.IntValue     maxTreeSize;
     public final ForgeConfigSpec.BooleanValue noSupplyPlacementRestrictions;
     public final ForgeConfigSpec.BooleanValue skyRaiders;
@@ -182,6 +185,9 @@ public class ServerConfiguration extends AbstractConfiguration
         badVisitorsChance = defineInteger(builder, "badvisitorchance", 2, 1, 100);
         femaleOnlyCitizens = defineBoolean(builder, "femaleonlycitizens", true);
         enableReproduction = defineBoolean(builder, "enablereproduction", false);
+        couriersPerHutLevel = defineInteger(builder, "couriersperhutlevel", 1, 1, 10);
+        couriersPerWarehouseLevel = defineInteger(builder, "couriersperwarehouselevel", 10, 1, 50);
+        citizensPerResidenceLevel = defineInteger(builder, "citizensperresidencelevel", 2, 1, 10);
         maxTreeSize = defineInteger(builder, "maxtreesize", 400, 1, 1000);
         noSupplyPlacementRestrictions = defineBoolean(builder, "nosupplyplacementrestrictions", false);
         skyRaiders = defineBoolean(builder, "skyraiders", false);

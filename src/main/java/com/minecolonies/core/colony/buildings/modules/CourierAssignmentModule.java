@@ -9,6 +9,7 @@ import com.minecolonies.api.colony.buildings.modules.IPersistentModule;
 import com.minecolonies.api.colony.buildings.modules.ITickingModule;
 import com.minecolonies.api.colony.jobs.ModJobs;
 import com.minecolonies.api.colony.jobs.registry.JobEntry;
+import com.minecolonies.core.MineColonies;
 import com.minecolonies.core.colony.jobs.JobDeliveryman;
 import net.minecraft.nbt.CompoundTag;
 import org.jetbrains.annotations.NotNull;
@@ -97,7 +98,11 @@ public class CourierAssignmentModule extends AbstractAssignedCitizenModule imple
     @Override
     public int getModuleMax()
     {
-        return this.building.getBuildingLevel() * 2;
+        if (building.getBuildingLevel() <= 0)
+        {
+            return 0;
+        }
+        return this.building.getBuildingLevel() * MineColonies.getConfig().getServer().couriersPerWarehouseLevel.get();
     }
 
     @Override

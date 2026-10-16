@@ -101,6 +101,36 @@ public class CitizenSleepHandler implements ICitizenSleepHandler
 
         if (!isBed)
         {
+            if (citizen.getCitizenData() != null && citizen.getCitizenData().getHomeBuilding() != null
+                && (citizen.getCitizenData().getHomeBuilding().isInBuilding(bedLocation) || citizen.getRestrictCenter().equals(bedLocation)))
+            {
+                citizen.setPose(Pose.SLEEPING);
+                citizen.getNavigation().stop();
+
+                citizen.setPos(citizen.getX(), citizen.getY(), citizen.getZ());
+                citizen.setSleepingPos(bedLocation);
+
+                citizen.setDeltaMovement(Vec3.ZERO);
+                citizen.hasImpulse = true;
+
+                //Remove item while citizen is asleep.
+                citizen.getCitizenItemHandler().removeHeldItem();
+
+                setIsAsleep(true);
+
+                citizen.getCitizenData().triggerInteraction(new StandardInteraction(Component.translatable(COM_MINECOLONIES_COREMOD_ENTITY_CITIZEN_SLEEPING), ChatPriority.HIDDEN));
+
+                if (citizen.getCitizenData() != null)
+                {
+                    citizen.getCitizenData().setBedPos(bedLocation);
+                }
+                citizen.getEntityData().set(DATA_BED_POS, bedLocation);
+
+                citizen.getCitizenData().getColony().getCitizenManager().onCitizenSleep();
+
+                return true;
+            }
+
             return false;
         }
 

@@ -11,6 +11,7 @@ import com.minecolonies.api.entity.citizen.Skill;
 import com.minecolonies.api.items.ModItems;
 import com.minecolonies.api.research.util.ResearchConstants;
 import com.minecolonies.api.util.constant.translation.RequestSystemTranslationConstants;
+import com.minecolonies.core.MineColonies;
 import com.minecolonies.core.colony.buildings.AbstractBuilding;
 import com.minecolonies.core.colony.buildings.AbstractBuildingGuards;
 import com.minecolonies.core.colony.buildings.modules.settings.*;
@@ -354,7 +355,8 @@ public class BuildingModules
      */
 
     public static final BuildingEntry.ModuleProducer<DeliverymanAssignmentModule,WorkerBuildingModuleView> COURIER_WORK        =
-      new BuildingEntry.ModuleProducer<>("courier_work", () -> new DeliverymanAssignmentModule(ModJobs.delivery.get(), Skill.Agility, Skill.Adaptability, false, (b) -> 1),
+      new BuildingEntry.ModuleProducer<>("courier_work", () -> new DeliverymanAssignmentModule(ModJobs.delivery.get(), Skill.Agility, Skill.Adaptability, false,
+        (b) -> b instanceof BuildingDeliveryman ? ((BuildingDeliveryman) b).getMaxWorkers() : (b.getBuildingLevel() <= 0 ? 0 : b.getBuildingLevel() * MineColonies.getConfig().getServer().couriersPerHutLevel.get())),
         () -> WorkerBuildingModuleView::new);
 
     public static final BuildingEntry.ModuleProducer<CourierAssignmentModule,CourierAssignmentModuleView> WAREHOUSE_COURIERS    =

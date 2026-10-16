@@ -5,6 +5,7 @@ import com.minecolonies.api.colony.IColonyView;
 import com.minecolonies.api.colony.buildings.modules.AbstractBuildingModule;
 import com.minecolonies.api.colony.buildings.modules.IDefinesCoreBuildingStatsModule;
 import com.minecolonies.api.colony.buildings.modules.stat.IStat;
+import com.minecolonies.core.MineColonies;
 import com.minecolonies.core.client.gui.huts.WindowHutLiving;
 import com.minecolonies.core.colony.buildings.views.LivingBuildingView;
 import net.minecraft.core.BlockPos;
@@ -18,7 +19,7 @@ public class HomeBuildingModule extends AbstractBuildingModule implements IDefin
     @Override
     public IStat<Integer> getMaxInhabitants()
     {
-        return (prev) -> Math.max(prev, building.getBuildingLevel());
+        return (prev) -> Math.max(prev, building.getBuildingLevel() <= 0 ? 0 : building.getBuildingLevel() * MineColonies.getConfig().getServer().citizensPerResidenceLevel.get());
     }
 
     /**

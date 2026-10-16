@@ -6,6 +6,7 @@ import com.minecolonies.api.colony.buildings.workerbuildings.IBuildingDeliveryma
 import com.minecolonies.api.colony.requestsystem.request.IRequest;
 import com.minecolonies.api.colony.requestsystem.requestable.IRequestable;
 import com.minecolonies.api.colony.requestsystem.requestable.deliveryman.Delivery;
+import com.minecolonies.core.MineColonies;
 import com.minecolonies.core.colony.buildings.AbstractBuilding;
 import com.minecolonies.core.colony.buildings.modules.WorkerBuildingModule;
 import com.minecolonies.core.colony.jobs.JobDeliveryman;
@@ -48,21 +49,36 @@ public class BuildingDeliveryman extends AbstractBuilding implements IBuildingDe
     }
 
     @Override
+    public int getMaxWorkers()
+    {
+        if (getBuildingLevel() <= 0)
+        {
+            return 0;
+        }
+        return getBuildingLevel() * MineColonies.getConfig().getServer().couriersPerHutLevel.get();
+    }
+
+    @Override
     public boolean canEat(final ItemStack stack)
     {
-        final ICitizenData citizenData = getFirstModuleOccurance(WorkerBuildingModule.class).getFirstCitizen();
-        if (citizenData != null)
+        final WorkerBuildingModule module = getFirstModuleOccurance(WorkerBuildingModule.class);
+        if (module != null)
         {
-            final JobDeliveryman job = (JobDeliveryman) citizenData.getJob();
-            final IRequest<? extends IRequestable> currentTask = job.getCurrentTask();
-            if (currentTask == null)
+            for (final ICitizenData citizenData : module.getAssignedCitizen())
             {
-                return super.canEat(stack);
-            }
-            final IRequestable request = currentTask.getRequest();
-            if (request instanceof Delivery && ((Delivery) request).getStack().sameItem(stack))
-            {
-                return false;
+                if (citizenData.getJob() instanceof JobDeliveryman)
+                {
+                    final JobDeliveryman job = (JobDeliveryman) citizenData.getJob();
+                    final IRequest<? extends IRequestable> currentTask = job.getCurrentTask();
+                    if (currentTask != null)
+                    {
+                        final IRequestable request = currentTask.getRequest();
+                        if (request instanceof Delivery && ((Delivery) request).getStack().sameItem(stack))
+                        {
+                            return false;
+                        }
+                    }
+                }
             }
         }
         return super.canEat(stack);

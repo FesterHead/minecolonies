@@ -19,6 +19,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `disablePatreonChecking` client configuration toggle in `ClientConfiguration.java` (`disablepatreonchecking`, defaults to `true`):
   - Bypasses external HTTP authentication requests to `https://auth.minecolonies.com` and automatically unlocks all cosmetic perks (citizen skins, custom citizen names, and colony banner patterns).
   - Automatically hides the Town Hall GUI Patreon button when enabled (`WindowMainPage.java`).
+- Added `couriersPerHutLevel` server configuration option in `ServerConfiguration.java` (`couriersperhutlevel`, defaults to `1`):
+  - Scales the hiring capacity of Courier Huts dynamically by building level (`couriersPerHutLevel * buildingLevel`) without modifying physical blueprints (`BuildingDeliveryman.getMaxWorkers()` and `COURIER_WORK`). Clamps to 0 workers for unbuilt huts.
+  - Updated `BuildingDeliveryman.canEat()` to iterate through all assigned couriers to prevent concurrent delivery items from being consumed.
+- Added `couriersPerWarehouseLevel` server configuration option in `ServerConfiguration.java` (`couriersperwarehouselevel`, defaults to `10`):
+  - Scales the courier assignment capacity of Warehouses dynamically by building level (`couriersPerWarehouseLevel * buildingLevel`, supporting up to 50 couriers per Level 5 Warehouse) via `CourierAssignmentModule.getModuleMax()`. Clamps to 0 for unbuilt warehouses.
+- Added `citizensPerResidenceLevel` server configuration option in `ServerConfiguration.java` (`citizensperresidencelevel`, defaults to `2`):
+  - Scales the inhabitant capacity of Residences dynamically by building level (e.g. Level 5 residence supports up to 10 citizens) without requiring matching physical bed blocks in schematics (`HomeBuildingModule.getMaxInhabitants()` and `LivingBuildingModule.getModuleMax()`).
+  - Updated `CitizenSleepHandler.trySleep()` to allow citizens to sleep safely within their assigned home building when physical bed blocks are unavailable, maintaining full shelter and sleep satisfaction.
 
 ### Changed
 
